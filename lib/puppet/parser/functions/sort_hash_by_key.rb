@@ -8,7 +8,7 @@ module Puppet::Parser::Functions
       if recursive && seed[key].is_a?(Hash)
         seed[key] = sort_hash_by_key(seed[key], true)
       end
-      seed
     end
+    seed
   end
 end
