@@ -173,6 +173,7 @@ define puppi::project::builder (
     'dir'            => 'dir',
     'tarball'        => 'tarball',
     'zip'            => 'zip',
+    'gz'             => 'gz',
     'maven-metadata' => 'maven-metadata',
     'maven'          => 'maven-metadata',
     'war'            => 'war',
@@ -193,7 +194,7 @@ define puppi::project::builder (
   puppi::project { $name: enable => $enable }
 
 
-### INIT SEQUENCE
+### INIT SEQUENCE
   if ($init_source != '') {
     puppi::initialize { "${name}-Deploy_Files":
       priority  => '40' ,
